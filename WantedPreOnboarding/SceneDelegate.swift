@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  WantedPreOnboarding
 //
-//  Created by 이승기 on 2023/02/28.
+//  Created by Wallaby on 2023/02/28.
 //
 
 import UIKit

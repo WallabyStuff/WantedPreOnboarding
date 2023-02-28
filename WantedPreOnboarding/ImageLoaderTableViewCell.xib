@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageLoaderTableViewCell" rowHeight="93" id="KGk-i7-Jjw" customClass="ImageLoaderTableViewCell" customModule="WantedPreOnboarding" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TSb-3q-Bak">
+                        <rect key="frame" x="12" y="12" width="108" height="72"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="TSb-3q-Bak" secondAttribute="height" multiplier="3:2" id="m2c-70-cT1"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mw-u5-0wi">
+                        <rect key="frame" x="231" y="26" width="96" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="5tM-k0-f5l"/>
+                            <constraint firstAttribute="height" constant="44" id="LCf-Xs-o0f"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="tintColor" systemColor="systemPinkColor"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                        <state key="normal" title="Load">
+                            <imageReference key="image" image="square.and.arrow.down" catalog="system" symbolScale="medium"/>
+                        </state>
+                    </button>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="82Q-dU-1lq">
+                        <rect key="frame" x="56" y="38" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="M5A-rT-Rwy">
+                        <rect key="frame" x="54" y="37.666666666666664" width="24" height="21"/>
+                        <color key="tintColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="FPG-BO-awQ"/>
+                            <constraint firstAttribute="width" constant="24" id="ULI-iy-4UB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="TSb-3q-Bak" secondAttribute="bottom" constant="12" id="9jT-mb-eny"/>
+                    <constraint firstItem="TSb-3q-Bak" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="J1w-H1-TCk"/>
+                    <constraint firstItem="4mw-u5-0wi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LJN-Qa-KMN"/>
+                    <constraint firstItem="82Q-dU-1lq" firstAttribute="centerY" secondItem="TSb-3q-Bak" secondAttribute="centerY" id="MBh-vu-5HK"/>
+                    <constraint firstItem="M5A-rT-Rwy" firstAttribute="centerY" secondItem="TSb-3q-Bak" secondAttribute="centerY" id="P89-wT-Tau"/>
+                    <constraint firstItem="TSb-3q-Bak" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="aa7-Qu-HT0"/>
+                    <constraint firstItem="82Q-dU-1lq" firstAttribute="centerX" secondItem="TSb-3q-Bak" secondAttribute="centerX" id="dfE-es-SVc"/>
+                    <constraint firstItem="M5A-rT-Rwy" firstAttribute="centerX" secondItem="TSb-3q-Bak" secondAttribute="centerX" id="t1B-ma-e3E"/>
+                    <constraint firstAttribute="trailing" secondItem="4mw-u5-0wi" secondAttribute="trailing" constant="12" id="u9u-Uh-S1j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imagePlaceholderImageView" destination="M5A-rT-Rwy" id="h98-e1-lCQ"/>
+                <outlet property="loadButton" destination="4mw-u5-0wi" id="t0I-ce-tZ0"/>
+                <outlet property="loadingIndicatorView" destination="82Q-dU-1lq" id="CMy-Rl-Te0"/>
+                <outlet property="randomImageView" destination="TSb-3q-Bak" id="Csl-7d-7ZE"/>
+            </connections>
+            <point key="canvasLocation" x="121.37404580152672" y="37.323943661971832"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
