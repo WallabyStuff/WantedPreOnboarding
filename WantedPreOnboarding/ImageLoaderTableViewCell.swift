@@ -21,7 +21,7 @@ class ImageLoaderTableViewCell: UITableViewCell {
   
   // MARK: - Properties
   
-  private var imageAPIService: ImageAPIService?
+  public var imageAPIService: ImageAPIService?
   
   @IBOutlet weak var randomImageView: UIImageView!
   @IBOutlet weak var loadButton: UIButton!
@@ -38,7 +38,7 @@ class ImageLoaderTableViewCell: UITableViewCell {
   
   override func prepareForReuse() {
     super.prepareForReuse()
-    imageAPIService?.stopTask()
+    cancelImageLoadingTask()
   }
   
   
@@ -58,7 +58,7 @@ class ImageLoaderTableViewCell: UITableViewCell {
   private func setupRandomImageView() {
     randomImageView.layer.cornerRadius = Metric.randomImageViewCornerRadius
   }
-
+  
   private func setupLoadButton() {
     loadButton.layer.cornerRadius = Metric.loadButtonCornerRadius
   }
@@ -78,6 +78,10 @@ class ImageLoaderTableViewCell: UITableViewCell {
   // MARK: - Methods
   
   @IBAction func didTapLoadButton(_ sender: Any) {
+    setRandomImage()
+  }
+  
+  public func setRandomImage() {
     if imageAPIService == nil {
       imageAPIService = ImageAPIService()
     }
@@ -96,6 +100,15 @@ class ImageLoaderTableViewCell: UITableViewCell {
           self.imagePlaceholderImageView.isHidden = true
         }
       }
+    }
+  }
+  
+  public func cancelImageLoadingTask() {
+    imageAPIService?.stopTask()
+    
+    if randomImageView.image == nil {
+      imagePlaceholderImageView.isHidden = false
+      stopLoading()
     }
   }
   

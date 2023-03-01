@@ -33,6 +33,20 @@ class MainViewController: UIViewController {
     imageLoaderTableView.delegate = self
     imageLoaderTableView.dataSource = self
   }
+  
+  
+  // MARK: - Methods
+  
+  @IBAction func didTapLoadAllButton(_ sender: Any) {
+    for cell in imageLoaderTableView.visibleCells {
+      guard let cell = cell as? ImageLoaderTableViewCell else {
+        continue
+      }
+      
+      cell.cancelImageLoadingTask()
+      cell.setRandomImage()
+    }
+  }
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {

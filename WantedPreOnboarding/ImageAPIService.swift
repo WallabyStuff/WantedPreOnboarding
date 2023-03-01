@@ -28,8 +28,6 @@ class ImageAPIService {
       return nil
     }
     
-    let uuid = UUID()
-    
     let task = Task { () -> UIImage? in
       let (data, _) = try await URLSession.shared.data(from: imageURL)
       if let image = UIImage(data: data) {
