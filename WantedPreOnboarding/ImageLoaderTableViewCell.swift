@@ -21,6 +21,8 @@ class ImageLoaderTableViewCell: UITableViewCell {
   
   // MARK: - Properties
   
+  public var imageAPIService: ImageAPIService?
+  
   @IBOutlet weak var randomImageView: UIImageView!
   @IBOutlet weak var loadButton: UIButton!
   @IBOutlet weak var loadingIndicatorView: UIActivityIndicatorView!
@@ -33,6 +35,14 @@ class ImageLoaderTableViewCell: UITableViewCell {
     super.awakeFromNib()
     setup()
   }
+  
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    cancelImageLoadingTask()
+  }
+  
+  
+  // MARK: - Setups
   
   private func setup() {
     setupView()
@@ -48,7 +58,7 @@ class ImageLoaderTableViewCell: UITableViewCell {
   private func setupRandomImageView() {
     randomImageView.layer.cornerRadius = Metric.randomImageViewCornerRadius
   }
-
+  
   private func setupLoadButton() {
     loadButton.layer.cornerRadius = Metric.loadButtonCornerRadius
   }
@@ -61,6 +71,56 @@ class ImageLoaderTableViewCell: UITableViewCell {
   }
   
   private func setupLoadingIndicatorView() {
+    loadingIndicatorView.isHidden = true
+  }
+  
+  
+  // MARK: - Methods
+  
+  @IBAction func didTapLoadButton(_ sender: Any) {
+    setRandomImage()
+  }
+  
+  public func setRandomImage() {
+    if imageAPIService == nil {
+      imageAPIService = ImageAPIService()
+    }
+    
+    startLoading()
+    
+    Task {
+      let image = await imageAPIService?.fetchRandomImage()
+      DispatchQueue.main.async {
+        self.stopLoading()
+        self.randomImageView.image = image
+        
+        if image == nil {
+          self.imagePlaceholderImageView.isHidden = false
+        } else {
+          self.imagePlaceholderImageView.isHidden = true
+        }
+      }
+    }
+  }
+  
+  public func cancelImageLoadingTask() {
+    imageAPIService?.stopTask()
+    
+    if randomImageView.image == nil {
+      imagePlaceholderImageView.isHidden = false
+      stopLoading()
+    }
+  }
+  
+  private func startLoading() {
+    loadingIndicatorView.startAnimating()
+    loadingIndicatorView.isHidden = false
+    randomImageView.image = nil
+    imagePlaceholderImageView.isHidden = true
+  }
+  
+  private func stopLoading() {
+    loadingIndicatorView.stopAnimating()
     loadingIndicatorView.isHidden = true
   }
 }
