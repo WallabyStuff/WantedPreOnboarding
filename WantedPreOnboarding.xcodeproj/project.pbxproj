@@ -15,6 +15,7 @@
 		8EBE4B5B29AE4BB000E76C04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBE4B5929AE4BB000E76C04 /* LaunchScreen.storyboard */; };
 		8EBE4B6829AE530F00E76C04 /* ImageLoaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE4B6629AE530F00E76C04 /* ImageLoaderTableViewCell.swift */; };
 		8EBE4B6929AE530F00E76C04 /* ImageLoaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EBE4B6729AE530F00E76C04 /* ImageLoaderTableViewCell.xib */; };
+		8EBE4B6D29AF22F500E76C04 /* ImageAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBE4B6C29AF22F500E76C04 /* ImageAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8EBE4B5C29AE4BB000E76C04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EBE4B6629AE530F00E76C04 /* ImageLoaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderTableViewCell.swift; sourceTree = "<group>"; };
 		8EBE4B6729AE530F00E76C04 /* ImageLoaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageLoaderTableViewCell.xib; sourceTree = "<group>"; };
+		8EBE4B6C29AF22F500E76C04 /* ImageAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				8EBE4B5729AE4BB000E76C04 /* Assets.xcassets */,
 				8EBE4B5929AE4BB000E76C04 /* LaunchScreen.storyboard */,
 				8EBE4B5C29AE4BB000E76C04 /* Info.plist */,
+				8EBE4B6C29AF22F500E76C04 /* ImageAPIService.swift */,
 			);
 			path = WantedPreOnboarding;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EBE4B6D29AF22F500E76C04 /* ImageAPIService.swift in Sources */,
 				8EBE4B5329AE4BAE00E76C04 /* MainViewController.swift in Sources */,
 				8EBE4B4F29AE4BAE00E76C04 /* AppDelegate.swift in Sources */,
 				8EBE4B6829AE530F00E76C04 /* ImageLoaderTableViewCell.swift in Sources */,
