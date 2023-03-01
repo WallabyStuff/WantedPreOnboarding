@@ -43,6 +43,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EA5314329AF357200B152AA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8EBE4B4E29AE4BAE00E76C04 /* AppDelegate.swift */,
+				8EBE4B5029AE4BAE00E76C04 /* SceneDelegate.swift */,
+				8EA5314429AF358200B152AA /* Services */,
+				8EA5314629AF359600B152AA /* Cells */,
+				8EA5314529AF358C00B152AA /* Storyboards */,
+				8EA5314829AF35AD00B152AA /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8EA5314429AF358200B152AA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8EBE4B6C29AF22F500E76C04 /* ImageAPIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8EA5314529AF358C00B152AA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8EBE4B5429AE4BAE00E76C04 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8EA5314629AF359600B152AA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8EBE4B6629AE530F00E76C04 /* ImageLoaderTableViewCell.swift */,
+				8EBE4B6729AE530F00E76C04 /* ImageLoaderTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8EA5314829AF35AD00B152AA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EBE4B5229AE4BAE00E76C04 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8EA5314929AF35C000B152AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8EBE4B5729AE4BB000E76C04 /* Assets.xcassets */,
+				8EBE4B5929AE4BB000E76C04 /* LaunchScreen.storyboard */,
+				8EBE4B5C29AE4BB000E76C04 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8EBE4B4229AE4BAE00E76C04 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +118,8 @@
 		8EBE4B4D29AE4BAE00E76C04 /* WantedPreOnboarding */ = {
 			isa = PBXGroup;
 			children = (
-				8EBE4B4E29AE4BAE00E76C04 /* AppDelegate.swift */,
-				8EBE4B5029AE4BAE00E76C04 /* SceneDelegate.swift */,
-				8EBE4B5229AE4BAE00E76C04 /* MainViewController.swift */,
-				8EBE4B5429AE4BAE00E76C04 /* Main.storyboard */,
-				8EBE4B6629AE530F00E76C04 /* ImageLoaderTableViewCell.swift */,
-				8EBE4B6729AE530F00E76C04 /* ImageLoaderTableViewCell.xib */,
-				8EBE4B5729AE4BB000E76C04 /* Assets.xcassets */,
-				8EBE4B5929AE4BB000E76C04 /* LaunchScreen.storyboard */,
-				8EBE4B5C29AE4BB000E76C04 /* Info.plist */,
-				8EBE4B6C29AF22F500E76C04 /* ImageAPIService.swift */,
+				8EA5314329AF357200B152AA /* Sources */,
+				8EA5314929AF35C000B152AA /* Resources */,
 			);
 			path = WantedPreOnboarding;
 			sourceTree = "<group>";
@@ -301,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WantedPreOnboarding/Info.plist;
+				INFOPLIST_FILE = WantedPreOnboarding/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -329,7 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 497P4L97SV;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WantedPreOnboarding/Info.plist;
+				INFOPLIST_FILE = WantedPreOnboarding/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
